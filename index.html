@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beast AI Labs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Inter;
+background:black;
+color:white;
+}
+
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
+
+nav h1{
+font-family:Orbitron;
+color:#00eaff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+}
+
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.hero h2{
+font-size:70px;
+font-family:Orbitron;
+}
+
+section{
+padding:120px 10%;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>Beast AI</h1>
+</nav>
+
+<section class="hero">
+
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-solar-flare-from-the-sun-1571/1080p.mp4">
+</video>
+
+<div>
+<h2>Engineering Artificial Intelligence</h2>
+<p>AI systems. Robotics. Autonomous machines.</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>AI Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI Automation Platform</h3>
+<p>Automate business workflows using intelligent AI agents.</p>
+</div>
+
+<div class="card">
+<h3>Computer Vision AI</h3>
+<p>Image recognition and object detection systems.</p>
+</div>
+
+<div class="card">
+<h3>Generative AI Studio</h3>
+<p>Custom AI models for enterprise applications.</p>
+</div>
+
+<div class="card">
+<h3>Autonomous Robotics</h3>
+<p>Self-operating robots for logistics and manufacturing.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Robotics Systems</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Industrial Robots</h3>
+</div>
+
+<div class="card">
+<h3>Humanoid Robotics</h3>
+</div>
+
+<div class="card">
+<h3>Autonomous Vehicles</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Industries We Serve</h2>
+
+<div class="grid">
+
+<div class="card">Healthcare AI</div>
+<div class="card">Financial AI</div>
+<div class="card">Real Estate AI</div>
+<div class="card">Smart Cities</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
