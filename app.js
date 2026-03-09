@@ -1,4 +1,6 @@
-/* Galaxy particles */
+/* ================================
+GALAXY PARTICLE BACKGROUND
+================================ */
 
 const canvas=document.createElement("canvas")
 document.body.appendChild(canvas)
@@ -10,12 +12,14 @@ canvas.height=window.innerHeight
 
 let stars=[]
 
-for(let i=0;i<200;i++){
+for(let i=0;i<250;i++){
+
 stars.push({
 x:Math.random()*canvas.width,
 y:Math.random()*canvas.height,
 size:Math.random()*2
 })
+
 }
 
 function animateStars(){
@@ -26,7 +30,9 @@ ctx.fillRect(0,0,canvas.width,canvas.height)
 ctx.fillStyle="white"
 
 stars.forEach(s=>{
+
 ctx.fillRect(s.x,s.y,s.size,s.size)
+
 })
 
 requestAnimationFrame(animateStars)
@@ -36,13 +42,16 @@ requestAnimationFrame(animateStars)
 animateStars()
 
 
-/* 3D robot placeholder */
+
+/* ================================
+3D ROBOT PLACEHOLDER
+================================ */
 
 const scene=new THREE.Scene()
 
 const camera=new THREE.PerspectiveCamera(
 75,
-window.innerWidth/window.innerHeight,
+400/400,
 0.1,
 1000
 )
@@ -57,9 +66,9 @@ const geometry=new THREE.BoxGeometry()
 
 const material=new THREE.MeshBasicMaterial({color:0xffffff})
 
-const cube=new THREE.Mesh(geometry,material)
+const robot=new THREE.Mesh(geometry,material)
 
-scene.add(cube)
+scene.add(robot)
 
 camera.position.z=3
 
@@ -67,8 +76,8 @@ function animateRobot(){
 
 requestAnimationFrame(animateRobot)
 
-cube.rotation.x+=0.01
-cube.rotation.y+=0.01
+robot.rotation.x+=0.01
+robot.rotation.y+=0.01
 
 renderer.render(scene,camera)
 
@@ -77,31 +86,94 @@ renderer.render(scene,camera)
 animateRobot()
 
 
-/* AI demo */
 
-function demoAI(){
+/* ================================
+PRODUCTS (INSPIRED BY EXSQUARED)
+================================ */
 
-const q=document.getElementById("aiInput").value
+const products=[
 
-document.getElementById("aiOutput").innerText=
-"Demo AI response: "+q
+{
+name:"AI Product Engineering",
+desc:"Build intelligent AI powered applications and platforms.",
+img:"assets/ai-product.jpg"
+},
+
+{
+name:"Data & Analytics",
+desc:"Advanced data pipelines, analytics, and decision intelligence.",
+img:"assets/data-analytics.jpg"
+},
+
+{
+name:"Cloud & DevOps",
+desc:"Scalable infrastructure and cloud-native solutions.",
+img:"assets/cloud.jpg"
+},
+
+{
+name:"Digital Transformation",
+desc:"Enterprise modernization using AI and automation.",
+img:"assets/digital.jpg"
+},
+
+{
+name:"Machine Learning Platforms",
+desc:"Custom ML systems for enterprise operations.",
+img:"assets/ml.jpg"
+}
+
+]
+
+function loadProducts(){
+
+const container=document.getElementById("products")
+
+products.forEach(p=>{
+
+const card=document.createElement("div")
+
+card.className="productCard"
+
+card.innerHTML=`
+
+<img src="${p.img}" class="productImage">
+
+<h3>${p.name}</h3>
+
+<p>${p.desc}</p>
+
+`
+
+container.appendChild(card)
+
+})
 
 }
 
+loadProducts()
 
-/* chatbot */
+
+
+/* ================================
+AI CHATBOT (SIMPLE FRONTEND DEMO)
+================================ */
 
 function chatbot(){
 
 const text=document.getElementById("chatInput").value
 
-document.getElementById("chatOutput").innerText=
-"AI: Thanks for asking about "+text
+const output=document.getElementById("chatOutput")
+
+output.innerText="AI assistant received: "+text
 
 }
 
 
-/* dashboard */
+
+/* ================================
+AI DASHBOARD
+================================ */
 
 new Chart(
 
@@ -111,21 +183,27 @@ document.getElementById("chart"),
 type:"line",
 
 data:{
-labels:["Jan","Feb","Mar","Apr","May"],
+
+labels:["Jan","Feb","Mar","Apr","May","Jun"],
 
 datasets:[
 {
-label:"AI Usage",
-data:[10,20,30,40,60]
+label:"AI Platform Usage",
+data:[10,25,40,35,60,80]
 }
 ]
+
 }
 
 }
+
 )
 
 
-/* contact */
+
+/* ================================
+CONTACT FORM
+================================ */
 
 function sendMail(){
 
