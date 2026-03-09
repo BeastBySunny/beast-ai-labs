@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beast AI Labs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Inter;
+background:black;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+header h1{
+font-family:Orbitron;
+color:#00eaff;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:white;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+}
+
+.hero h2{
+font-size:60px;
+font-family:Orbitron;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+opacity:0.8;
+}
+
+section{
+padding:120px 10%;
+}
+
+.tech-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+backdrop-filter:blur(20px);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.08);
+}
+
+.robotics{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.robotics video{
+width:500px;
+border-radius:15px;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#050505;
+}
+
+button{
+padding:14px 30px;
+background:#00eaff;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Beast AI Labs</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Technology</a>
+<a href="#">Robotics</a>
+<a href="#">AI Systems</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-artificial-intelligence-technology-5175/1080p.mp4">
+</video>
+
+<div>
+<h2>The Future of Intelligence</h2>
+<p>We build advanced artificial intelligence, robotics and automation systems designed to transform industries and accelerate humanity's technological evolution.</p>
+
+<br>
+<button>Explore Technology</button>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 style="font-family:Orbitron">AI Technologies</h2>
+
+<div class="tech-grid">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Advanced neural networks powering decision making and automation.</p>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>Self-learning systems improving performance through data.</p>
+</div>
+
+<div class="card">
+<h3>Computer Vision</h3>
+<p>AI systems capable of understanding images and real-world environments.</p>
+</div>
+
+<div class="card">
+<h3>Autonomous Systems</h3>
+<p>Self-operating robotics and machines powered by intelligent algorithms.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="robotics">
+
+<div>
+
+<h2 style="font-family:Orbitron">Advanced Robotics</h2>
+
+<p>
+Our robotics division designs intelligent machines capable of autonomous navigation, manufacturing automation, and human collaboration.
+</p>
+
+<br>
+
+<button>See Robotics</button>
+
+</div>
+
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-robot-working-5376/1080p.mp4">
+</video>
+
+</section>
+
+<section>
+
+<h2 style="font-family:Orbitron">Innovation Pipeline</h2>
+
+<div class="tech-grid">
+
+<div class="card">
+<h3>Research</h3>
+<p>Cutting edge AI research and experimentation.</p>
+</div>
+
+<div class="card">
+<h3>Development</h3>
+<p>Engineering scalable artificial intelligence systems.</p>
+</div>
+
+<div class="card">
+<h3>Deployment</h3>
+<p>Deploying AI across industries worldwide.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Beast AI Labs</p>
+
+</footer>
+
+</body>
+</html>
