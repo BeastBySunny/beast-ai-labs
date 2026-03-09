@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Beast AI Labs</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Beast AI Labs</h1>
+
+<nav>
+<a href="#robots">Robotics</a>
+<a href="#ai">AI Demo</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section id="sun">
+
+<div class="sun"></div>
+
+<h2>Engineering the Future of AI</h2>
+
+</section>
+
+
+<section id="robots">
+
+<h2>Humanoid Robotics</h2>
+
+<div id="robot3d"></div>
+
+</section>
+
+
+<section id="ai">
+
+<h2>AI Demo</h2>
+
+<input id="aiInput" placeholder="Ask the demo AI">
+
+<button onclick="demoAI()">Run Demo</button>
+
+<div id="aiOutput"></div>
+
+</section>
+
+
+<section id="dashboard">
+
+<h2>AI Analytics Dashboard</h2>
+
+<canvas id="chart"></canvas>
+
+</section>
+
+
+<section id="chatbot">
+
+<h2>Chat With Our AI</h2>
+
+<input id="chatInput" placeholder="Ask something">
+
+<button onclick="chatbot()">Send</button>
+
+<div id="chatOutput"></div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendMail();return false;">
+
+<input id="name" placeholder="Name" required>
+
+<input id="phone" placeholder="Phone" required>
+
+<input id="email" placeholder="Email" required>
+
+<button>Send Inquiry</button>
+
+</form>
+
+</section>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
