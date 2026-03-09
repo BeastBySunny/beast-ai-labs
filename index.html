@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beast AI Labs</title>
+<meta name="description" content="Beast AI Labs builds next‑generation AI products, intelligent automation systems, and cutting‑edge digital platforms.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Inter',sans-serif;
+background:#020617;
+color:#e2e8f0;
+line-height:1.6;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 60px;
+background:rgba(2,6,23,0.6);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+header h2{font-weight:800;color:#fff}
+
+nav a{
+color:#cbd5f5;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a:hover{color:#fff}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px;
+background:radial-gradient(circle at top,#0f172a,#020617);
+}
+
+.hero h1{
+font-size:64px;
+font-weight:900;
+max-width:900px;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+color:#94a3b8;
+}
+
+.btn{
+margin-top:35px;
+display:inline-block;
+padding:16px 34px;
+background:linear-gradient(135deg,#6366f1,#22d3ee);
+border-radius:8px;
+text-decoration:none;
+color:#fff;
+font-weight:600;
+}
+
+section{
+padding:120px 8%;
+max-width:1400px;
+margin:auto;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:40px;
+font-weight:800;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+padding:35px;
+background:linear-gradient(145deg,#0f172a,#020617);
+border:1px solid #1e293b;
+border-radius:14px;
+transition:all .3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#6366f1;
+}
+
+.card h3{margin-bottom:15px}
+
+.video-section{
+text-align:center;
+}
+
+video{
+width:100%;
+max-width:900px;
+border-radius:12px;
+margin-top:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+transition:transform .4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.step{
+padding:30px;
+background:#0f172a;
+border-radius:10px;
+border:1px solid #1e293b;
+}
+
+.cta{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#1e293b,#020617);
+}
+
+.cta h2{
+font-size:44px;
+margin-bottom:20px;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:30px;
+}
+
+input,textarea{
+padding:14px;
+border-radius:6px;
+border:1px solid #334155;
+background:#020617;
+color:#fff;
+}
+
+button{
+padding:16px;
+border:none;
+border-radius:8px;
+background:linear-gradient(135deg,#6366f1,#22d3ee);
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:40px;
+border-top:1px solid #1e293b;
+color:#64748b;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:40px}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Beast AI Labs</h2>
+<nav>
+<a href="#services">Services</a>
+<a href="#technology">Technology</a>
+<a href="#process">Process</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>Engineering The Future With Artificial Intelligence</h1>
+<p>Beast AI Labs builds next‑generation AI platforms, intelligent automation systems, and scalable digital products for startups and enterprises worldwide.</p>
+<a class="btn" href="#contact">Start Building With AI</a>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title">AI & Technology Services</h2>
+<div class="services">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Machine learning systems, generative AI tools, computer vision, and predictive analytics.</p>
+</div>
+
+<div class="card">
+<h3>Custom Software</h3>
+<p>Scalable SaaS platforms, enterprise systems, and cloud‑native applications.</p>
+</div>
+
+<div class="card">
+<h3>Automation Systems</h3>
+<p>Automate business workflows using AI agents and advanced automation pipelines.</p>
+</div>
+
+<div class="card">
+<h3>Mobile Applications</h3>
+<p>High‑performance iOS and Android applications for modern digital products.</p>
+</div>
+
+<div class="card">
+<h3>AI Product Design</h3>
+<p>UX/UI design for complex AI systems and advanced digital platforms.</p>
+</div>
+
+<div class="card">
+<h3>Engineering Teams</h3>
+<p>Elite engineers, AI researchers, and product designers ready to scale your company.</p>
+</div>
+
+</div>
+</section>
+
+<section id="technology" class="video-section">
+<h2 class="section-title">Advanced AI Technology</h2>
+<p>Explore the power of intelligent systems transforming industries.</p>
+
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-artificial-intelligence-technology-5175/1080p.mp4" type="video/mp4">
+</video>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<img src="https://images.unsplash.com/photo-1581091870627-3c5e9f36e4b9">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+</div>
+
+</section>
+
+<section id="process">
+<h2 class="section-title">Our Innovation Process</h2>
+<div class="process">
+
+<div class="step">
+<h3>1 Discovery</h3>
+<p>Understand problems, opportunities, and innovation potential.</p>
+</div>
+
+<div class="step">
+<h3>2 Design</h3>
+<p>Create system architecture and AI product strategy.</p>
+</div>
+
+<div class="step">
+<h3>3 Development</h3>
+<p>Build powerful AI platforms using modern technologies.</p>
+</div>
+
+<div class="step">
+<h3>4 Scale</h3>
+<p>Deploy globally and continuously improve AI performance.</p>
+</div>
+
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2>Start Your AI Project</h2>
+<p>Tell us about your idea and Beast AI Labs will help bring it to life.</p>
+
+<form action="mailto:Addie92sunny@gmail.com" method="post" enctype="text/plain">
+<input type="text" placeholder="Name" required>
+<input type="email" placeholder="Email" required>
+<input type="text" placeholder="Company">
+<textarea rows="5" placeholder="Tell us about your project"></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+</section>
+
+<footer>
+© 2026 Beast AI Labs • Engineering the Future
+</footer>
+
+</body>
+</html>
