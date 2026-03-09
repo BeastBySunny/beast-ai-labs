@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beast AI Labs</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="space-bg"></div>
+
+<header>
+<h1>Beast AI Labs</h1>
+<p>Silicon Valley AI Technology Company</p>
+</header>
+
+<section class="hero">
+<video autoplay muted loop id="sunVideo">
+<source src="sun.mp4" type="video/mp4">
+</video>
+</section>
+
+<section class="ai-demo">
+
+<h2>Ask our demo AI something:</h2>
+
+<input id="question" placeholder="Ask anything about AI">
+
+<button onclick="askAI()">Ask</button>
+
+<div id="answer"></div>
+
+</section>
+
+<section class="products">
+
+<h2>AI Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI Automation</h3>
+<p>Automate enterprise workflows with intelligent AI.</p>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>Advanced predictive AI models.</p>
+</div>
+
+<div class="card">
+<h3>Robotics</h3>
+<p>Next-gen robotic automation systems.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<form onsubmit="sendEmail(); return false;">
+
+<input id="name" placeholder="Name" required>
+
+<input id="email" placeholder="Email" required>
+
+<textarea id="message" placeholder="Message"></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
