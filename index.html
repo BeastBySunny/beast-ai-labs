@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Beast AI Labs</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beast AI Labs | Silicon Valley AI Company</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-font-family:Inter;
+font-family:Inter, sans-serif;
+background:#000;
 color:white;
 overflow-x:hidden;
-background:black;
-transition:background 2s ease;
-}
-
-body.sun-mode{
-background:linear-gradient(#000000,#2c0a00,#ff6a00);
 }
 
 nav{
 position:fixed;
 top:0;
 width:100%;
+padding:20px 60px;
 display:flex;
 justify-content:space-between;
-padding:20px 60px;
 background:rgba(0,0,0,0.5);
 backdrop-filter:blur(10px);
 z-index:1000;
@@ -47,32 +34,30 @@ color:#00eaff;
 }
 
 nav a{
-margin-left:30px;
 color:white;
 text-decoration:none;
+margin-left:30px;
 }
 
 .hero{
 height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 position:relative;
 }
 
-.hero video{
+#galaxy{
 position:absolute;
 width:100%;
 height:100%;
-object-fit:cover;
-z-index:-1;
-filter:brightness(40%);
+z-index:-2;
 }
 
 .hero h2{
-font-family:Orbitron;
 font-size:70px;
+font-family:Orbitron;
 }
 
 section{
@@ -93,46 +78,83 @@ transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-10px) scale(1.03);
-background:rgba(255,255,255,0.1);
+transform:translateY(-10px) scale(1.05);
+}
+
+#robotCanvas{
+width:100%;
+height:500px;
+}
+
+#networkCanvas{
+width:100%;
+height:400px;
+background:#02030a;
+border-radius:20px;
 }
 
 .sun-section{
-height:80vh;
+height:90vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 position:relative;
+background:radial-gradient(circle at center,#ff6a00,#000);
 }
 
-.sun-section video{
-position:absolute;
+.sun{
+width:250px;
+height:250px;
+border-radius:50%;
+background:radial-gradient(circle,#ffcc33,#ff3300);
+box-shadow:0 0 120px orange;
+animation:sunPulse 6s infinite alternate;
+}
+
+@keyframes sunPulse{
+from{transform:scale(1)}
+to{transform:scale(1.2)}
+}
+
+.ai-demo{
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+input{
 width:100%;
-height:100%;
-object-fit:cover;
-z-index:-1;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+border:none;
 }
 
-.sun-section h2{
-font-family:Orbitron;
-font-size:50px;
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#00eaff;
+margin-top:15px;
+cursor:pointer;
 }
 
 footer{
 text-align:center;
 padding:40px;
-background:#040404;
+background:#050505;
 }
 
-button{
-padding:15px 35px;
-border:none;
-border-radius:40px;
-background:#00eaff;
-font-weight:600;
-cursor:pointer;
-margin-top:20px;
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:all 1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
 }
 
 </style>
@@ -141,136 +163,190 @@ margin-top:20px;
 <body>
 
 <nav>
-
 <h1>Beast AI</h1>
-
 <div>
-<a href="#">Technology</a>
-<a href="#">Products</a>
-<a href="#">Robotics</a>
-<a href="#">Research</a>
-<a href="#">Contact</a>
+<a href="#tech">Technology</a>
+<a href="#robot">Robotics</a>
+<a href="#ai">AI Systems</a>
+<a href="#sun">Energy</a>
+<a href="#demo">AI Demo</a>
 </div>
-
 </nav>
 
 <section class="hero">
-
-<video autoplay muted loop>
-<source src="https://cdn.coverr.co/videos/coverr-artificial-intelligence-technology-5175/1080p.mp4">
-</video>
-
+<canvas id="galaxy"></canvas>
 <div>
-
-<h2>Engineering Artificial Intelligence</h2>
-
-<p>AI platforms, robotics and intelligent automation for the next generation of industry.</p>
-
-<button>Explore Technology</button>
-
+<h2>Engineering The Future of Intelligence</h2>
+<p>Artificial Intelligence • Robotics • Autonomous Systems</p>
 </div>
-
 </section>
 
-<section>
-
-<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">
-AI Products
-</h2>
-
+<section id="tech" class="fade">
+<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">AI Technologies</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Generative AI Platform</h3>
-<p>Create AI powered content, chatbots and intelligent assistants.</p>
+<div class="card">Generative AI Systems</div>
+<div class="card">Machine Learning Platforms</div>
+<div class="card">Computer Vision Intelligence</div>
+<div class="card">AI Automation Agents</div>
 </div>
-
-<div class="card">
-<h3>Computer Vision System</h3>
-<p>AI models that detect objects, faces and environments.</p>
-</div>
-
-<div class="card">
-<h3>ML Ops Infrastructure</h3>
-<p>Deploy and monitor machine learning models at scale.</p>
-</div>
-
-<div class="card">
-<h3>AI Data Intelligence</h3>
-<p>Extract insights from structured and unstructured data.</p>
-</div>
-
-</div>
-
 </section>
 
-<section>
-
-<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">
-Enterprise Solutions
-</h2>
-
-<div class="grid">
-
-<div class="card">Healthcare AI</div>
-
-<div class="card">Financial AI Systems</div>
-
-<div class="card">Smart Cities AI</div>
-
-<div class="card">Manufacturing Automation</div>
-
-</div>
-
+<section id="robot" class="fade">
+<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">3D Robotics Lab</h2>
+<canvas id="robotCanvas"></canvas>
 </section>
 
-<section>
-
-<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">
-Robotics Systems
-</h2>
-
-<div class="grid">
-
-<div class="card">Autonomous Robots</div>
-
-<div class="card">Industrial Robotics</div>
-
-<div class="card">AI Drones</div>
-
-</div>
-
+<section id="ai" class="fade">
+<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:40px">Neural Network Visualization</h2>
+<canvas id="networkCanvas"></canvas>
 </section>
 
-<section class="sun-section" id="sun">
+<section id="sun" class="sun-section fade">
+<div>
+<div class="sun"></div>
+<h2 style="margin-top:30px;font-family:Orbitron">Powering Intelligence Like The Sun</h2>
+</div>
+</section>
 
-<video autoplay muted loop>
-<source src="https://cdn.coverr.co/videos/coverr-solar-flare-from-the-sun-1571/1080p.mp4">
-</video>
-
-<h2>Powering Intelligence Like The Sun</h2>
-
+<section id="demo" class="fade">
+<h2 style="font-family:Orbitron;font-size:40px;margin-bottom:30px">Interactive AI Demo</h2>
+<div class="ai-demo">
+<p>Ask our demo AI something:</p>
+<input id="userInput" placeholder="Type a question...">
+<button onclick="runAI()">Run AI</button>
+<p id="aiOutput" style="margin-top:20px"></p>
+</div>
 </section>
 
 <footer>
-
 <p>© 2026 Beast AI Labs</p>
-
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <script>
 
-const sunSection = document.querySelector("#sun");
+/* GALAXY BACKGROUND */
+const galaxy=document.getElementById("galaxy")
+const gctx=galaxy.getContext("2d")
 
-window.addEventListener("scroll",()=>{
+function resize(){
+galaxy.width=window.innerWidth
+galaxy.height=window.innerHeight
+}
+resize()
+window.onresize=resize
 
-const rect = sunSection.getBoundingClientRect();
-
-if(rect.top < window.innerHeight/2){
-document.body.classList.add("sun-mode");
+let stars=[]
+for(let i=0;i<300;i++){
+stars.push({x:Math.random()*galaxy.width,y:Math.random()*galaxy.height,s:Math.random()*2})
 }
 
+function drawStars(){
+gctx.fillStyle="black"
+gctx.fillRect(0,0,galaxy.width,galaxy.height)
+
+gctx.fillStyle="white"
+stars.forEach(st=>{
+ gctx.beginPath()
+ gctx.arc(st.x,st.y,st.s,0,Math.PI*2)
+ gctx.fill()
+ st.y+=0.2
+ if(st.y>galaxy.height)st.y=0
 })
+requestAnimationFrame(drawStars)
+}
+
+drawStars()
+
+/* THREE JS ROBOT */
+const scene=new THREE.Scene()
+const camera=new THREE.PerspectiveCamera(75,window.innerWidth/500,0.1,1000)
+
+const renderer=new THREE.WebGLRenderer({canvas:document.getElementById("robotCanvas"),alpha:true})
+renderer.setSize(window.innerWidth,500)
+
+const geometry=new THREE.BoxGeometry()
+const material=new THREE.MeshBasicMaterial({color:0x00eaff,wireframe:true})
+
+const cube=new THREE.Mesh(geometry,material)
+scene.add(cube)
+
+camera.position.z=3
+
+function animate(){
+requestAnimationFrame(animate)
+cube.rotation.x+=0.01
+cube.rotation.y+=0.01
+renderer.render(scene,camera)
+}
+
+animate()
+
+/* NEURAL NETWORK */
+const net=document.getElementById("networkCanvas")
+const nctx=net.getContext("2d")
+net.width=window.innerWidth
+net.height=400
+
+let nodes=[]
+for(let i=0;i<40;i++){
+nodes.push({x:Math.random()*net.width,y:Math.random()*net.height})
+}
+
+function drawNet(){
+nctx.clearRect(0,0,net.width,net.height)
+
+nodes.forEach(n=>{
+ nodes.forEach(n2=>{
+  let d=Math.hypot(n.x-n2.x,n.y-n2.y)
+  if(d<150){
+   nctx.strokeStyle="rgba(0,234,255,.2)"
+   nctx.beginPath()
+   nctx.moveTo(n.x,n.y)
+   nctx.lineTo(n2.x,n2.y)
+   nctx.stroke()
+  }
+ })
+
+ nctx.fillStyle="#00eaff"
+ nctx.beginPath()
+ nctx.arc(n.x,n.y,3,0,Math.PI*2)
+ nctx.fill()
+})
+
+requestAnimationFrame(drawNet)
+}
+
+drawNet()
+
+/* AI DEMO */
+function runAI(){
+const q=document.getElementById("userInput").value
+const responses=[
+"Analyzing data patterns...",
+"Neural network prediction generated.",
+"AI recommends automation optimization.",
+"Processing complete. Intelligence generated."
+]
+
+const r=responses[Math.floor(Math.random()*responses.length)]
+
+document.getElementById("aiOutput").innerText=r
+}
+
+/* SCROLL ANIMATION */
+const faders=document.querySelectorAll('.fade')
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show')
+}
+})
+})
+
+faders.forEach(el=>observer.observe(el))
 
 </script>
 
