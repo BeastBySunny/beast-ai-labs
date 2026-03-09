@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact Beast AI Labs</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Contact Us</h1>
+
+<form onsubmit="sendMail(); return false;">
+
+<input id="name" placeholder="Name" required>
+
+<input id="phone" placeholder="Phone" required>
+
+<input id="email" placeholder="Email" required>
+
+<textarea id="message" placeholder="Message"></textarea>
+
+<button type="submit">Send Inquiry</button>
+
+</form>
+
+<script>
+
+function sendMail(){
+
+const name=document.getElementById("name").value
+const phone=document.getElementById("phone").value
+const email=document.getElementById("email").value
+const message=document.getElementById("message").value
+
+window.location.href =
+`mailto:Addie92sunny@gmail.com?subject=Website Inquiry&body=
+Name:${name}
+Phone:${phone}
+Email:${email}
+Message:${message}`
+
+}
+
+</script>
+
+</body>
+</html>
